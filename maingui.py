@@ -5,8 +5,7 @@ from tkinter import ttk
 
 class BaseFrame(tk.Frame):
     def __init__(self, parent=None, **kwargs):
-        super().__init__(parent
-        , **kwargs)
+        super().__init__(parent, **kwargs)
         self.parent = parent
 
         btn = ttk.Button(self, text="Back", command=self.go_back)
@@ -20,7 +19,8 @@ class LogSession(BaseFrame):
         super().__init__(parent, **kwargs)
         self.parent = parent
 
-        # put code for the log session here.
+        lbl = tk.Label(self, text="put code for the log session here.")
+        lbl.pack()
 
 class ViewHistory(BaseFrame):
     def __init__(self, parent=None, **kwargs):
